@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="AvenirNext.ttc">
+            <string>AvenirNext-DemiBold</string>
+            <string>AvenirNext-UltraLight</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Scribe" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cq9-rl-caz">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="55"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SCRIBE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gio-XK-FUU">
+                                        <rect key="frame" x="152.5" y="21.5" width="69" height="28"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="20"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.85882352941176465" green="0.10980392156862745" blue="0.10980392156862745" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="GCM-rg-KTJ"/>
+                                    <constraint firstItem="gio-XK-FUU" firstAttribute="centerX" secondItem="Cq9-rl-caz" secondAttribute="centerX" id="lyA-Mt-2a1"/>
+                                    <constraint firstItem="gio-XK-FUU" firstAttribute="centerY" secondItem="Cq9-rl-caz" secondAttribute="centerY" constant="8" id="sNM-Ak-DYM"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WkA-r4-eAv" customClass="CircleButton" customModule="Scribe" customModuleProvider="target">
+                                <rect key="frame" x="157" y="563" width="60" height="60"/>
+                                <color key="backgroundColor" red="0.85882352939999995" green="0.10980392160000001" blue="0.10980392160000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="XqX-e7-E4d"/>
+                                    <constraint firstAttribute="height" constant="60" id="deM-na-98A"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="30"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="onPlayTranscribeBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xNk-iP-34s"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PLAY &amp; TRANSCRIBE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zmc-iN-aao">
+                                <rect key="frame" x="90" y="631" width="194.5" height="28"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="20"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="u9x-UA-IJD">
+                                <rect key="frame" x="157" y="563" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="CjX-q4-FjA"/>
+                                    <constraint firstAttribute="width" constant="60" id="LI8-af-AXQ"/>
+                                </constraints>
+                            </activityIndicatorView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Tap the button below to transcribe the audio embedded into this app." textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="KAN-jF-gEF">
+                                <rect key="frame" x="20" y="75" width="335" height="468"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-UltraLight" family="Avenir Next" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="zmc-iN-aao" secondAttribute="bottom" constant="8" id="0Ve-ln-GSl"/>
+                            <constraint firstItem="u9x-UA-IJD" firstAttribute="centerY" secondItem="WkA-r4-eAv" secondAttribute="centerY" id="3VK-OI-wdl"/>
+                            <constraint firstItem="WkA-r4-eAv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Cnj-fl-Vud"/>
+                            <constraint firstItem="WkA-r4-eAv" firstAttribute="top" secondItem="KAN-jF-gEF" secondAttribute="bottom" constant="20" id="DNt-nI-tLS"/>
+                            <constraint firstItem="u9x-UA-IJD" firstAttribute="centerX" secondItem="WkA-r4-eAv" secondAttribute="centerX" id="KkS-ku-t4L"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Cq9-rl-caz" secondAttribute="trailing" id="Lcs-4U-RoA"/>
+                            <constraint firstItem="KAN-jF-gEF" firstAttribute="top" secondItem="Cq9-rl-caz" secondAttribute="bottom" constant="20" id="R4v-2z-GaY"/>
+                            <constraint firstItem="zmc-iN-aao" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="iXf-Bz-cKk"/>
+                            <constraint firstItem="Cq9-rl-caz" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="lNC-lk-EdY"/>
+                            <constraint firstItem="KAN-jF-gEF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="mef-Is-BOj"/>
+                            <constraint firstItem="zmc-iN-aao" firstAttribute="top" secondItem="WkA-r4-eAv" secondAttribute="bottom" constant="8" id="ml3-6J-a8V"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="KAN-jF-gEF" secondAttribute="trailing" constant="20" id="ts6-El-nER"/>
+                            <constraint firstItem="Cq9-rl-caz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="wdz-ME-YnD"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="spinner" destination="u9x-UA-IJD" id="eWa-gs-Ogz"/>
+                        <outlet property="textField" destination="KAN-jF-gEF" id="buj-Bg-iky"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+</document>
